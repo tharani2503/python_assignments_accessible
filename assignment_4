@@ -1,0 +1,73 @@
+
+####     assignment 4##
+def ranger(*args):
+    if len(args)==1:
+        if bool(len(args)==1 and args[0]>0):
+            i=0
+            end=args[0]
+            a=[]
+            while len(a)<end:
+                yield i
+                temp=i
+##                a.append(temp)
+                i=temp+1
+                
+        else:
+            print('wrong input')
+            print('1. if input is single number it should be a "positive integer"')
+            
+        
+    if len(args)==2:
+        if bool(len(args)==2 and args[1]>args[0]):
+         start=args[0]
+         end=args[1]
+         a=[start]
+##          print(end-start)
+         b=abs(end-start)
+         while len(a)< b:
+             yield start+1
+             temp=start+1
+             start=temp
+##             a.append(temp)
+##             if len(a)== b:
+##                 print(a)
+        else:
+            print('wrong input')
+            print('if inputs are two numbers it should be in the format of args[1]> args[0]')
+            
+
+    if len(args)==3:
+        if bool(args[1]>args[0] and args[2]>0):
+            start=args[0]
+            end=args[1]
+            stepsize=args[2]
+            a=[start]
+            b=abs((start-end)/stepsize)
+            while len(a)<b:
+                temp=start+stepsize
+                start=temp
+                a.append(temp)
+                if len(a)==b:
+                    print(a)
+        elif bool(args[1]<args[0] and args[2]<0):
+            start=args[0]
+            end=args[1]
+            stepsize=args[2]
+            a=[start]
+            b=abs(int((start-end)/stepsize))
+            while len(a)<b:
+                temp=start+stepsize
+                start=temp
+                a.append(temp)
+                if len(a)==b:
+                    print(a)
+        else:
+                 print('wrong input')
+                 print('if inputs are 3 numbers  the format should satisfy either of two conditions')
+                 print('condition1: args[1]<arg[0] and args[2]<0')
+                 print('condition2: args[1]>args[0] and args[2]>0')
+        
+        
+
+            
+            
