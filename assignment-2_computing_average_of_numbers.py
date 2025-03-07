@@ -1,4 +1,5 @@
-def fn(*args):
+## Author: Vinoth D
+def Average(*args):
     if len(args)==0:
         print("wrong input, please give me some number")
     else:
