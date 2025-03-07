@@ -1,3 +1,5 @@
+## author: VinothD
+
 stlfile=open("C:/Users/vinothd/PYTHON/assignments/myTet.stl")
 points=[]
 areas=[]
