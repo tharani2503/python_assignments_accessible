@@ -1,11 +1,12 @@
 
 ####     assignment 4##
+##Author: Vinoth D
+##
 def myranger(*args):
     if len(args)==1:
         if bool(len(args)==1 and args[0]>0):
             i=0
             end=args[0]
-            a=[]
             while len(a)<end:
                 yield i
                 temp=i
@@ -21,7 +22,6 @@ def myranger(*args):
         if bool(len(args)==2 and args[1]>args[0]):
          start=args[0]
          end=args[1]
-         a=[start]
 ##          print(end-start)
          b=abs(end-start)
          while len(a)< b:
@@ -41,24 +41,22 @@ def myranger(*args):
             start=args[0]
             end=args[1]
             stepsize=args[2]
-            a=[start]
             b=abs((start-end)/stepsize)
             while len(a)<b:
                 temp=start+stepsize
+                yield temp
                 start=temp
-                a.append(temp)
                 if len(a)==b:
                     print(a)
         elif bool(args[1]<args[0] and args[2]<0):
             start=args[0]
             end=args[1]
             stepsize=args[2]
-            a=[start]
             b=abs(int((start-end)/stepsize))
             while len(a)<b:
                 temp=start+stepsize
+                yield temp
                 start=temp
-                a.append(temp)
                 if len(a)==b:
                     print(a)
         else:
