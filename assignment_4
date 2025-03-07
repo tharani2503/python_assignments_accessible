@@ -1,6 +1,6 @@
 
 ####     assignment 4##
-def ranger(*args):
+def myranger(*args):
     if len(args)==1:
         if bool(len(args)==1 and args[0]>0):
             i=0
