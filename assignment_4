@@ -3,6 +3,7 @@
 ##Author: Vinoth D
 ##
 def myranger(*args):
+    ''' myranger is an alternative for Buitin range function'''
     if len(args)==1:
         if bool(len(args)==1 and args[0]>0):
             i=0
